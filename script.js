@@ -1,16 +1,32 @@
-const fruits = [{ apple: 1 }, { banana: 2 }, { orange: 3 }];
-
-const index = fruits.findIndex(elem => {
- 
-  for (const value in elem) {
-    if (elem.hasOwnProperty(value) && elem[value] > 2) {
-      return true;
+const arrayOfFruits = [
+    "Apple 1",
+     "Banana 2 ",
+    "Orange 3",
+    "Mango 4",
+  ];
+  
+  function removeNumbers(arr) {
+    const result = [];
+  
+    for (let i = 0; i < arr.length; i++) {
+      let cleanedString = arr[i];
+      
+      cleanedString = cleanedString.replace(/[0-9]/g, '');
+  
+      const parts = cleanedString.split('-');
+      if (parts.length > 1) {
+        cleanedString = parts[0].trim();
+      }
+  
+      result.push(cleanedString.trim());
     }
+  
+    return result;
   }
-  return false;
-});
-
-console.log(index); 
-   
- 
+  
+  const newArray = removeNumbers(arrayOfFruits);
+  
+  
+  console.log(newArray);
+  
   
