@@ -13,13 +13,13 @@ const arr = [
     // the filter method in JavaScript,create a new array that contains all elements from the arr array whose id property does not match the idToDelete value.
     return arr.filter(item => item.id !== idToDelete);
   }
-  // This defines a constant variable idToDelete and assigns it the value 3. This is the id value that you want to use as a filter criterion
+  // This defines a constant variable idToDelete and assigns it the value 3. This is the id value that you want to use as a filter -
   //  to remove objects from the arr.
   const idToDelete = 3;
 
   // A new constant variable newArray is defined.This variable is assigned the result of calling the deleteObjectsById 
   // function with two arguments. This argument is the array containing objects that you want to filter and idToDelete is the argument of the id
-  //  value that you want to use as the criterion for filtering.
+  //  value that you want to use for filtering.
   const newArray = deleteObjectsById(arr, idToDelete);
   
   // this will print the filtered array to the console, allowing you to give the result.
